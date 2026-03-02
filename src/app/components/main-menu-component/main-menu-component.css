@@ -1,9 +1,14 @@
+* {
+    font-family: "Montserrat", sans-serif;
+}
+
 .hero-section {
     position: relative;
     height: 100vh;
     overflow: hidden;
-    font-family: "Josefin Sans", sans-serif;
+    font-family: "Montserrat", sans-serif;
     width: 100%;
+    border-bottom: 1px solid #fff;
 }
 
 
@@ -27,7 +32,7 @@
     position: absolute;
     width: 100%;
     height: 100%;
-    background: rgba(0, 0, 0, 0.5);
+    background: rgba(0, 0, 0, 0.2);
     z-index: 1;
 }
 
@@ -44,37 +49,20 @@
     text-align: center;
 }
 
-.subtitle {
-    font-style: italic;
-    color: #d6b37a;
+.hero-content img {
+    width: 300px;
+    height: auto;
 }
 
 .hero-content h1 {
+    line-height: 1.2;
     font-family: "Josefin Sans", sans-serif;
     font-weight: 500;
     font-style: normal;
     font-size: 50px;
 }
 
-/* .desc {
-    max-width: 600px;
-} */
 
-/* BUTTONS */
-.buttons {
-    margin-top: 30px;
-}
-
-.btn {
-    padding: 14px 26px;
-    margin: 0 10px;
-    font-size: 16px;
-    cursor: pointer;
-}
-
-.btn:hover {
-    background-color: #c8a46b;
-}
 
 .primary {
     background: #c8a46b;
@@ -91,7 +79,7 @@
 .background {
     width: 100%;
     height: 300px;
-    background-color: #c8a46b;
+    background-color: #980000;
 }
 
 .gold-strip {
@@ -113,6 +101,49 @@
     font-weight: 500;
 }
 
+.menu-cta {
+    padding: 18px 0;
+    background: rgba(0, 0, 0, 0.6);
+    backdrop-filter: blur(1px);
+}
+
+.menu-cta__inner {
+    width: min(1100px, 92%);
+    height: 30vh;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 16px;
+}
+
+.menu-cta__text h3 {
+    margin: 0;
+    font-size: 40px;
+    color: #fff;
+}
+
+.menu-cta__text p {
+    margin: 6px 0 0;
+    color: rgba(255, 255, 255, 0.9);
+    line-height: 1.4;
+    font-size: 18px;
+}
+
+.menu-cta__btn {
+    margin-top: 10px;
+    padding: 10px 20px;
+    border: 0;
+    border-radius: 5px;
+    cursor: pointer;
+    background: transparent;
+    border: 1px solid #fff;
+    color: #ffffff;
+    font-weight: 650;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.25);
+    white-space: nowrap;
+}
+
 @keyframes scrollText {
     from {
         transform: translateX(0);
@@ -129,23 +160,12 @@
     overflow: hidden;
 }
 
-.gold-strip::before {
-    content: "QUATTRO";
-    position: absolute;
-    font-size: 180px;
-    font-weight: 700;
-    color: rgba(255, 255, 255, 0.08);
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    letter-spacing: 15px;
-}
 
 
 .parallax-wrapper {
     font-family: "Josefin Sans", sans-serif;
     min-height: 40vh;
-    background-image: url('/black-background.jpg');
+    background-image: url('/parallax.jpg');
     background-size: cover;
     background-position: center;
     background-attachment: fixed;
@@ -193,7 +213,8 @@
 
 .gallery-section {
     padding: 120px 0;
-    background: transparent;
+    background: rgba(0, 0, 0, 0.6);
+    backdrop-filter: blur(1px);
 }
 
 .gallery-grid {
@@ -207,7 +228,6 @@
 .gallery-card {
     overflow: hidden;
     border-radius: 15px;
-    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.08);
     transition: all .4s ease;
 }
 
@@ -227,102 +247,87 @@
     transform: scale(1.02);
 }
 
-.review-container {
+.faq-menu {
+    margin: 40px 100px;
+    background: rgba(0, 0, 0, 0.2);
+    backdrop-filter: blur(1px);
+}
+
+.faq-item {
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     align-items: center;
     justify-content: center;
-    position: relative;
-    height: 45vh;
+    width: 100%;
+    margin-bottom: 10px;
+    border-radius: 14px;
     overflow: hidden;
-    font-family: "Josefin Sans", sans-serif;
-    background: #fff;
+    background: rgba(0, 0, 0, 0.6);
+    backdrop-filter: blur(8px);
+    border: 1px solid rgba(255, 255, 255, 0.1);
 }
 
-.rate-us {
-    display: flex;
-    flex-direction: row;
-    align-items: end;
-    justify-content: end;
-    flex: 1;
-}
-
-.rate-us img {
-    width: 270px;
-    height: auto;
-    margin-top: 40px;
-}
-
-.rate-us h1 {
-    font-size: 70px;
-    line-height: 80px;
-    color: #c8a46b;
-}
-
-.review-box {
-    flex: 1;
-    margin: 50px 100px;
-    height: auto;
-    border: 1px solid rgba(255, 255, 255, 0.08);
-    border-radius: 16px;
-    padding: 30px 10px;
-    background: #8c8c8c;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    font-size: 18px;
-}
-
-
-.review-btn {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    width: 50%;
-    margin-top: 14px;
-    padding: 14px 12px;
-    background: #c8a46b;
-    color: #ffffff;
+.faq-question {
+    width: 100%;
+    padding: 18px;
+    background: transparent;
+    border: none;
+    color: #fff;
+    font-size: 16px;
     font-weight: 600;
-    text-decoration: none;
-    border-radius: 12px;
-    transition: transform .25s ease, filter .25s ease;
+    text-align: left;
+    cursor: pointer;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 }
 
-.review-btn:hover {
-    transform: translateY(-2px);
-    filter: brightness(0.95);
+.faq-answer {
+    max-height: 0;
+    overflow: hidden;
+    transition: all 0.4s ease;
+    padding: 0 18px;
 }
 
-.review-link {
-    display: block;
-    margin-top: 12px;
-    color: #ffffff;
-    text-decoration: none;
-    text-align: center;
-    opacity: 0.85;
-    transition: opacity .2s;
+.faq-answer.open {
+    max-height: 300px;
+    padding: 0 18px 20px;
 }
 
-
-.review-link:hover {
-    opacity: 1;
+.faq-answer p {
+    color: rgba(255, 255, 255, 0.75);
+    line-height: 1.6;
+    margin: 10px 0 15px;
 }
 
+.menu-btn {
+    padding: 10px 16px;
+    border-radius: 10px;
+    border: none;
+    cursor: pointer;
+    background: #c8a46b;
+    color: #111;
+    font-weight: 600;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.25);
+}
 
-@media (max-width:992px) {
+.icon {
+    transition: 0.3s ease;
+}
 
+.icon.rotate {
+    transform: rotate(45deg);
 }
 
 @media (max-width:600px) {
 
     .hero-section {
         position: relative;
-        height: 70vh;
+        height: 50vh;
         overflow: hidden;
+        background: rgba(0, 0, 0, 0.6);
         font-family: "Josefin Sans", sans-serif;
+        border-bottom: 1px solid #fff;
     }
 
 
@@ -363,18 +368,16 @@
         text-align: center;
     }
 
-    .subtitle {
-        font-style: italic;
-        color: #d6b37a;
-        font-size: 10px;
-        margin-bottom: 2px;
+    .hero-content img {
+        width: 120px;
+        height: auto;
     }
 
     .hero-content h1 {
         font-family: "Josefin Sans", sans-serif;
         font-weight: 500;
         font-style: normal;
-        font-size: 29px;
+        font-size: 22px;
     }
 
     .buttons {
@@ -388,10 +391,46 @@
         cursor: pointer;
     }
 
+    .menu-cta__inner {
+        width: 80%;
+        height: auto;
+        /* 30vh iptal */
+        min-height: 180px;
+        padding: 18px 0;
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: center;
+        gap: 12px;
+    }
+
+    .menu-cta__text h3 {
+        font-size: 24px;
+        line-height: 1.15;
+    }
+
+    .menu-cta__text p {
+        font-size: 14.5px;
+        line-height: 1.55;
+    }
+
+    .menu-cta__btn {
+        margin-top: 10px;
+        padding: 8px 16px;
+        border: 0;
+        border-radius: 5px;
+        cursor: pointer;
+        background: transparent;
+        border: 1px solid #fff;
+        color: #ffffff;
+        font-weight: 650;
+        box-shadow: 0 10px 25px rgba(0, 0, 0, 0.25);
+        white-space: nowrap;
+    }
+
     .parallax-wrapper {
         font-family: "Josefin Sans", sans-serif;
         min-height: 30vh;
-        background-image: url('/black-background.jpg');
+        background-image: url('/parallax.jpg');
         background-size: cover;
         background-position: center;
         background-attachment: fixed;
@@ -399,49 +438,10 @@
         flex-direction: column;
     }
 
-    .parallax-section .content {
-        padding: 60px 0;
-        display: flex;
-        flex-direction: column;
-        margin: 0px 40px;
-    }
-
-    .parallax-section .left {
-        flex: 1;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-    }
-
-    .parallax-section .right {
-        flex: 1;
-        justify-content: center;
-        align-items: center;
-    }
-
-    .left img {
-        width: 100px;
-        height: auto;
-    }
-
-    .left h1 {
-        font-size: 25px;
-        font-weight: 400;
-        letter-spacing: 2px;
-    }
-
-    .right h2 {
-        font-size: 18px;
-        font-weight: 350;
-        text-align: justify;
-    }
-
-
     .background {
         width: 100%;
-        height: 200px;
-        background-color: #c8a46b;
+        height: 150px;
+        background-color: #980000;
         display: flex;
         flex-direction: column;
         justify-content: center;
@@ -488,7 +488,8 @@
 
     .gallery-section {
         padding: 100px 0;
-        background: transparent;
+        background: rgba(0, 0, 0, 0.6);
+        backdrop-filter: blur(1px);
     }
 
     .gallery-grid {
@@ -522,6 +523,60 @@
         transform: scale(1.02);
     }
 
+
+    .faq-menu {
+        width: 92%;
+        margin: 22px auto;
+        gap: 10px;
+    }
+
+    .faq-item {
+        border-radius: 12px;
+    }
+
+    .faq-question {
+        padding: 14px 14px;
+        font-size: 14.5px;
+        gap: 10px;
+    }
+
+    /* Soru metni çok uzarsa düzgün kırılsın */
+    .faq-question {
+        white-space: normal;
+        word-break: break-word;
+    }
+
+    .icon {
+        width: 32px;
+        height: 32px;
+        border-radius: 10px;
+    }
+
+    .faq-answer {
+        padding: 0 14px;
+    }
+
+    .faq-answer.open {
+        padding: 0 14px 14px;
+        max-height: 420px;
+        /* mobilde metin daha çok satır olabilir */
+    }
+
+    .faq-answer p {
+        font-size: 14px;
+        margin: 10px 0 12px;
+    }
+
+    /* Buton full genişlik olsun */
+    .menu-btn {
+        width: 100%;
+        white-space: normal;
+    }
+
+}
+
+
+@media (max-width:400px) {
     .review-container {
         display: flex;
         flex-direction: column;
@@ -533,91 +588,4 @@
         font-family: "Josefin Sans", sans-serif;
         background: #fff;
     }
-
-    .rate-us {
-        display: flex;
-        flex-direction: row;
-        align-items:end;
-        justify-content: end;
-        flex: 1;
-        margin: 0px 15px;
-        width: 80%;
-    }
-
-    .rate-us img {
-        width: 120px;
-        height: auto;
-        margin-top: 0px;
-        bottom: 0;
-    }
-
-    .rate-us h1 {
-        font-size: 32px;
-        color: #c8a46b;
-        line-height: 38px;
-        margin-bottom: 25px
-    }
-
-    .review-box {
-        flex: 1;
-        width: 80%;
-        height: 20%;
-        border: 1px solid rgba(255, 255, 255, 0.08);
-        border-radius: 10px;
-        background: #8c8c8c;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
-        font-size: 18px;
-        margin-bottom: 0px;
-    }
-
-
-    .review-btn {
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        width: 80%;
-        padding: 10px 20px;
-        background: #c8a46b;
-        color: #ffffff;
-        font-weight: 600;
-        text-decoration: none;
-        border-radius: 10px;
-        transition: transform .25s ease, filter .25s ease;
-    }
-
-    .review-btn:hover {
-        transform: translateY(-2px);
-        filter: brightness(0.95);
-    }
-
-    .review-link {
-        display: block;
-        margin-top: 12px;
-        color: #ffffff;
-        text-decoration: none;
-        text-align: center;
-        opacity: 0.85;
-        transition: opacity .2s;
-    }
-
 }
-
-
-@media (max-width:400px) {
-  .review-container {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
-        position: relative;
-        height: 40vh;
-        overflow: hidden;
-        font-family: "Josefin Sans", sans-serif;
-        background: #fff;
-    }
-}
-

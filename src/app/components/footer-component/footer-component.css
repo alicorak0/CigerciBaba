@@ -1,6 +1,6 @@
 .footer {
-    background: #111;
-    color: #eaeaea;
+    background: #000000;
+    color: #000000;
     padding: 60px 28px 40px 28px;
     font-family: "Josefin Sans", sans-serif;
     display: flex;
@@ -20,20 +20,20 @@
 
 
 .footer h2 {
-    color: #c8a46b;
+    color: #980000;
     letter-spacing: 3px;
     margin-bottom: 12px;
     font-size: 20px;
 }
 
 .footer h3 {
-    color: #c8a46b;
+    color: #980000;
     letter-spacing: 3px;
     margin-bottom: 8px;
 }
 
 .footer h4 {
-    color: #fff;
+    color: #980000;
     letter-spacing: 1px;
     font-size: 18px;
     font-weight: 400;
@@ -81,7 +81,7 @@
 .social-media-icon i {
     font-size: 25px;
     color:
-    #c8a46b;
+    #980000;
 }
 
 .social-media-icon i:hover{

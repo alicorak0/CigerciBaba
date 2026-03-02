@@ -17,6 +17,33 @@ export class MainMenuComponent implements AfterViewInit {
   @ViewChild('bgVideo')
   bgVideo!: ElementRef<HTMLVideoElement>;
 
+  isOpen = false;
+
+  activeIndex: number | null = null;
+
+  toggle(index: number) {
+    if (this.activeIndex === index) {
+      this.activeIndex = null; // tekrar basınca kapansın
+    } else {
+      this.activeIndex = index;
+    }
+  }
+
+  faqList = [
+    {
+      question: "Sadece ciğer servisniz mi var ?",
+      answer: "Tüm kahvelerimizi ve tatlılarımızı inceleyebilirsiniz."
+    },
+    {
+      question: "Rezervasyon yapabiliyor muyuz?",
+      answer: "Rezervasyon için bizimle iletişime geçebilirsiniz."
+    },
+
+    {
+      question: "Rezervasyon yapabiliyor muyuz?",
+      answer: "Rezervasyon için bizimle iletişime geçebilirsiniz."
+    }
+  ];
 
   ngAfterViewInit() {
     const vid = this.bgVideo.nativeElement;
