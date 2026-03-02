@@ -51,7 +51,7 @@ body {
 }
 
 .logo img {
-  width: 100px;
+  width: 150px;
   height: auto;
   transition: 0.3s ease;
 }
@@ -118,7 +118,7 @@ body {
   }
 
   .header {
-    padding: 5px 0px;
+    padding: 10px 0px;
     position: sticky;
     top: 0;
     left: 0;
@@ -130,7 +130,7 @@ body {
   }
 
   .logo img {
-    width: 80px;
+    width: 100px;
     height: auto;
   }
 

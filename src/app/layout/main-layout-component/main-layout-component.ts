@@ -21,9 +21,9 @@ export class MainLayoutComponent {
       .pipe(filter(e => e instanceof NavigationEnd))
       .subscribe(() => {
 
-        // 🔥 MENÜDEYSE header kapat
-        this.showHeader = !this.router.url.startsWith('/menu');
-        this.showHeader = !this.router.url.startsWith('/contact');
+        // 🔥 MENÜDEYSE header kapat  
+        this.showHeader = !this.router.url.startsWith('/menu') &&
+         !this.router.url.startsWith('/contact');
 
       });
   }
